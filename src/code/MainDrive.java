@@ -45,8 +45,32 @@ public class MainDrive {
 			inputNumberArr[0] = num / 100;
 			inputNumberArr[1] = (num % 100) / 10;
 			inputNumberArr[2] = num % 10;
+			
+			int strikeCount = 0;
+			int ballCount = 0;
+			
+			for (int i = 0; i < inputNumberArr.length; i++) {
+				
+				for (int j = 0; j < questionNumArr.length; j++) {
+					
+					if (inputNumberArr[i] == questionNumArr[j]) {
+						
+						if (i == j) {
+							strikeCount++;
+						} else {
+							ballCount++;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			System.out.println(strikeCount + "S " + ballCount + "B");
+				
 		}
-		sc.close();
+		
 		
 		
 	}
