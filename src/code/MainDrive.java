@@ -1,5 +1,7 @@
 package code;
 
+import java.util.Scanner;
+
 public class MainDrive {
 
 	public static void main(String[] args) {
@@ -33,6 +35,19 @@ public class MainDrive {
 		for (int num : questionNumArr) {
 			System.out.print(num + " ");
 		}
+		
+		Scanner sc = new Scanner(System.in);
+		int[] inputNumberArr = new int[3];
+		while (true) {
+			System.out.print("3자리 숫자 입력 : ");
+			int num = sc.nextInt();
+			
+			inputNumberArr[0] = num / 100;
+			inputNumberArr[1] = (num % 100) / 10;
+			inputNumberArr[2] = num % 10;
+		}
+		sc.close();
+		
 		
 	}
 
