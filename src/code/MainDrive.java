@@ -32,10 +32,6 @@ public class MainDrive {
 			
 		}
 		
-		for (int num : questionNumArr) {
-			System.out.print(num + " ");
-		}
-		
 		Scanner sc = new Scanner(System.in);
 		int[] inputNumberArr = new int[3];
 		while (true) {
@@ -68,9 +64,14 @@ public class MainDrive {
 			}
 			
 			System.out.println(strikeCount + "S " + ballCount + "B");
+			
+			if (strikeCount == 3) {
+				System.out.println("정답입니다.");
+				break;
+			}
 				
 		}
-		
+		sc.close();
 		
 		
 	}
